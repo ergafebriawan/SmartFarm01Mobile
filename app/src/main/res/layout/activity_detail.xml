@@ -10,159 +10,168 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="15dp"
-        android:background="@color/BGmap">
+        android:background="@drawable/bg_white">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/namaTanaman"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Nama Tanaman"
-                android:layout_margin="10dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:background="@color/BGutama"/>
+            android:orientation="vertical"
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/gambarTanaman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_launcher_background"
-                android:layout_margin="10dp"/>
+                android:src="@drawable/p4"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="20dp" />
 
-            <TextView
-                android:id="@+id/posisiTanaman"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="10dp"
-                android:text="Posisi : "
-                android:textSize="20dp"/>
-
-            <TextView
-                android:id="@+id/umurTanaman"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="10dp"
-                android:text="umur : Hari"
-                android:textSize="20dp"/>
-
-            <!--Kadar air-->
+                <ImageView
+                    android:id="@+id/btnAction"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/siram"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="center_horizontal"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="10dp">
-                <TextView
-                    android:id="@+id/kadarAir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kadar Air : - %"
-                    android:textSize="20dp"/>
-                <Button
-                    android:id="@+id/btnCekAir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="Cek Air"/>
-            </LinearLayout>
-
-            <!--Kadar PH-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="10dp">
-                <TextView
-                    android:id="@+id/kadarPH"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kadar PH : - %"
-                    android:textSize="20dp"/>
-                <Button
-                    android:id="@+id/btnCekPH"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="Cek PH"/>
-            </LinearLayout>
-
-            <!--Button Control-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="220dp"
                 android:orientation="vertical"
-                android:background="@color/BGheader"
-                android:layout_marginHorizontal="10dp">
+                android:background="@drawable/bg_detail"
+                android:layout_marginHorizontal="25dp">
+
+                <TextView
+                    android:id="@+id/posisiTanaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="Tanaman "
+                    android:textSize="20dp"
+                    android:textColor="@color/cardview_light_background"/>
+
+                <TextView
+                    android:id="@+id/umurTanaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:text="umur : Hari"
+                    android:textSize="20dp"/>
+
+                <!--Kadar air-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
-                    android:layout_marginVertical="10dp">
-                    <Button
-                        android:id="@+id/btnTananam"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="5dp">
+                    <TextView
+                        android:id="@+id/kadarAir"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Tanaman"/>
-                    <Button
-                        android:id="@+id/btnPanen"
+                        android:text="Kadar Air : - %"
+                        android:textSize="20dp"/>
+                    <ImageView
+                        android:id="@+id/btnCekAir"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Panen"/>
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/cek_air"/>
                 </LinearLayout>
 
+                <!--Kadar PH-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
-                    android:layout_marginVertical="10dp">
-                    <Button
-                        android:id="@+id/btnSiram"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="5dp">
+                    <TextView
+                        android:id="@+id/kadarPH"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Siram"/>
-                    <Button
-                        android:id="@+id/btnPupuk"
+                        android:text="Kadar PH : - %"
+                        android:textSize="20dp"/>
+                    <ImageView
+                        android:id="@+id/btnCekPH"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Pupuk"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginHorizontal="40dp"
-                    android:layout_marginVertical="10dp">
-                    <Button
-                        android:id="@+id/btnHapus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Hapus"/>
-                    <Button
-                        android:id="@+id/btnClose"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:text="Keluar"/>
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/cek_suhu"/>
                 </LinearLayout>
             </LinearLayout>
+
+
+
+<!--            &lt;!&ndash;Button Control&ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:background="@color/BGheader"-->
+<!--                android:layout_marginHorizontal="10dp">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginHorizontal="40dp"-->
+<!--                    android:layout_marginVertical="10dp">-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnTananam"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Tanaman"/>-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnPanen"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Panen"/>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginHorizontal="40dp"-->
+<!--                    android:layout_marginVertical="10dp">-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnSiram"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Siram"/>-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnPupuk"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Pupuk"/>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginHorizontal="40dp"-->
+<!--                    android:layout_marginVertical="10dp">-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnHapus"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Hapus"/>-->
+<!--                    <Button-->
+<!--                        android:id="@+id/btnClose"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="40dp"-->
+<!--                        android:text="Keluar"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 
